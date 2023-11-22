@@ -29,13 +29,14 @@ function App() {
         <Route element={<Layout />}>
           <Route path={"/"} element={<Home />} />
           <Route path="vans" element={<VansLife />} />
-          <Route path="van/:id" element={<VansDetails />} />
+          <Route path="vans/:id" element={<VansDetails />} />
 
           <Route path="host" element={<DashboardLayout />}>
             <Route index element={<Dashboard />} />
             <Route path="income" element={<Income />} />
             <Route path="reviews" element={<Reviews />} />
             <Route path="vans" element={<Vans />} />
+
             <Route path="vans/:id" element={<HostVansDetail />}>
               <Route index element={<Detail />} />
               <Route path="pictures" element={<Pictures />} />
@@ -43,9 +44,9 @@ function App() {
             </Route>
           </Route>
         </Route>
+
         <Route path="/about" element={<About />} />
       </Routes>
-      {/* <Footer /> */}
     </BrowserRouter>
   );
 }
